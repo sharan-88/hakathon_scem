@@ -1,3 +1,36 @@
+# 🎓 Internship Portal Platform
+
+A modern, role-based internship portal platform connecting **Students**, **Colleges**, and **Companies**, built with React (or Next.js) and Tailwind CSS. Inspired by platforms like Internshala, this system facilitates verified internships through a collaborative workflow among all three user roles.
+
+---
+
+## 📌 Project Overview
+
+This platform streamlines the internship application and verification process:
+
+- **Companies** can post internship/job opportunities.
+- **Colleges** verify these posts and rate their quality.
+- **Students** apply to verified internships with confidence.
+
+Each role has a dedicated dashboard, features, and workflows.
+
+---
+
+## 👤 User Roles
+
+| Role     | Features                                                                 |
+|----------|--------------------------------------------------------------------------|
+| Student  | View internships, apply, manage profile, track application status        |
+| College  | Verify internships, rate opportunities, manage linked students           |
+| Company  | Post jobs, manage listings, view applicants                              |
+
+---
+
+
+
+
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -6,13 +39,7 @@ First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+#
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
