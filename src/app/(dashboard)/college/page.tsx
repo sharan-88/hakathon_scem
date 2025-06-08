@@ -15,6 +15,21 @@ import {
   ArrowRightOnRectangleIcon,
 } from "@heroicons/react/24/outline";
 
+interface VerificationJob {
+  id: number;
+  title: string;
+  company: string;
+  domain: string;
+  status: string;
+  description: string;
+  duration: string;
+  stipend: number;
+  companyInfo: string;
+  comment?: string;
+  rating?: number;
+  action?: string;
+}
+
 // Mock: Replace with real auth/user context
 const mockCollegeUser = {
   name: "ABC Institute of Technology",
@@ -23,7 +38,7 @@ const mockCollegeUser = {
 };
 
 // Mock: Replace with API data
-const initialVerifications = [
+const initialVerifications: VerificationJob[] = [
   {
     id: 1,
     title: "Frontend Developer Intern",
@@ -61,8 +76,8 @@ const initialVerifications = [
 
 export default function CollegeDashboard() {
   const router = useRouter();
-  const [verifications, setVerifications] = useState(initialVerifications);
-  const [selectedJob, setSelectedJob] = useState(null);
+  const [verifications, setVerifications] = useState<VerificationJob[]>(initialVerifications);
+  const [selectedJob, setSelectedJob] = useState<VerificationJob | null>(null);
   const [modalOpen, setModalOpen] = useState(false);
   const [actionLoading, setActionLoading] = useState(false);
   const [comment, setComment] = useState("");
@@ -81,7 +96,7 @@ export default function CollegeDashboard() {
   }, []);
 
   // Modal open handler
-  const handleViewDetails = (job) => {
+  const handleViewDetails = (job: VerificationJob) => {
     setSelectedJob(job);
     setComment(job.comment || "");
     setRating(job.rating || 0);
@@ -89,7 +104,7 @@ export default function CollegeDashboard() {
   };
 
   // Approve/Reject handlers
-  const handleAction = (status) => {
+  const handleAction = (status: string) => {
     if (!selectedJob) return;
     setActionLoading(true);
     setTimeout(() => {
