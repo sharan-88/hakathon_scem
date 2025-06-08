@@ -119,7 +119,8 @@ export default function CollegeDashboard() {
           <div className="flex items-center gap-8">
             <span className="text-xl font-bold text-indigo-700 tracking-tight">Internship Portal</span>
             <a href="#" className="text-gray-700 hover:text-indigo-600 font-medium transition-colors">Dashboard</a>
-            <a href="#" className="text-gray-700 hover:text-indigo-600 font-medium transition-colors">Rating History</a>
+            <a href="/dashboard/college/job-verification" className="text-gray-700 hover:text-indigo-600 font-medium transition-colors">Job Verification</a>
+            <a href="/dashboard/college/rating-history" className="text-gray-700 hover:text-indigo-600 font-medium transition-colors">Rating History</a>
           </div>
           <button
             onClick={handleLogout}

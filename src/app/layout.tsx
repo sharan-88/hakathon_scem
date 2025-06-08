@@ -16,7 +16,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} antialiased`}>{children}</body>
+      <body className={`${inter.className} antialiased min-h-screen flex flex-col relative`}>
+        {/* Global background image with gradient overlay */}
+        <div className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "linear-gradient(135deg, #D6AED6cc, #98D9E1cc), url('/br-register-login.png')" }} />
+        {/* Content wrapper to ensure text color adapts for contrast */}
+        <div className="relative z-10 flex-grow flex flex-col text-gray-900 dark:text-white">
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
