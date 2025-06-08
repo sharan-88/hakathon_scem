@@ -1,37 +1,49 @@
-# 🎓 Internship Portal Platform
+# Free Internship Portal
 
-A modern, role-based internship portal platform connecting **Students**, **Colleges**, and **Companies**, built with React (or Next.js) and Tailwind CSS. Inspired by platforms like Internshala, this system facilitates verified internships through a collaborative workflow among all three user roles.
+A role-based internship portal platform connecting Students, Colleges, and Companies.
 
----
+## Project Structure
 
-## 📌 Project Overview
+```
+src/
+├── app/                    # App router pages
+│   ├── (auth)/            # Authentication related routes
+│   ├── (dashboard)/       # Dashboard routes for all roles
+│   ├── (public)/         # Public routes
+│   └── api/              # API routes
+├── components/
+│   ├── common/           # Shared components across all roles
+│   ├── student/          # Student-specific components
+│   ├── college/          # College-specific components
+│   ├── company/          # Company-specific components
+│   └── internship/       # Internship-related components
+├── features/             # Feature-specific logic and components
+│   ├── auth/            # Authentication related features
+│   ├── internships/     # Internship posting and management
+│   ├── profiles/        # Profile management for all roles
+│   └── dashboard/       # Dashboard features for all roles
+├── hooks/               # Custom React hooks
+├── lib/                 # Utility functions and shared logic
+├── types/              # TypeScript type definitions
+├── styles/             # Global styles and Tailwind configurations
+└── utils/              # Helper functions and utilities
+```
 
-This platform streamlines the internship application and verification process:
+## Role-Based Architecture
 
-- **Companies** can post internship/job opportunities.
-- **Colleges** verify these posts and rate their quality.
-- **Students** apply to verified internships with confidence.
+The project follows a role-based architecture with three main user types:
+- Students
+- Colleges
+- Companies
 
-Each role has a dedicated dashboard, features, and workflows.
+Each role has its own specific components and features while sharing common functionality like internship posts.
 
----
+## Technology Stack
 
-## 👤 User Roles
-
-| Role     | Features                                                                 |
-|----------|--------------------------------------------------------------------------|
-| Student  | View internships, apply, manage profile, track application status        |
-| College  | Verify internships, rate opportunities, manage linked students           |
-| Company  | Post jobs, manage listings, view applicants                              |
-
----
-
-
-
-
-
-
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+- Next.js (React)
+- TypeScript
+- Tailwind CSS
+- ESLint
 
 ## Getting Started
 
@@ -39,7 +51,13 @@ First, run the development server:
 
 ```bash
 npm run dev
-#
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
